@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tag
+  -->
+  <title>Saksham Digital technology</title>
+  <meta name="title" content="Saksham Digital Technology">
+  <meta name="description" content="This is a landing page made by Aman Jay">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="icon" href="./img/favicon.svg" sizes="any" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      /**
+   * colors
+   */
+
+      --selective-yellow: hsl(42, 94%, 55%);
+      --eerie-black-1: hsl(0, 0%, 9%);
+      --eerie-black-2: hsl(180, 3%, 7%);
+      --quick-silver: hsl(0, 0%, 65%);
+      --radical-red: hsl(351, 83%, 61%);
+      --light-gray: hsl(0, 0%, 80%);
+      --isabelline: hsl(36, 33%, 94%);
+      --gray-x-11: hsl(0, 0%, 73%);
+      --kappel_15: hsla(170, 75%, 41%, 0.15);
+      --platinum: hsl(0, 0%, 90%);
+      --gray-web: hsl(0, 0%, 50%);
+      --black_80: hsla(0, 0%, 0%, 0.8);
+      --white_50: hsla(0, 0%, 100%, 0.5);
+      --black_50: hsla(0, 0%, 0%, 0.5);
+      --black_30: hsla(0, 0%, 0%, 0.3);
+      --kappel: hsl(170, 75%, 41%);
+      --blood-pink: hsla(348 94% 56% / 0.87);
+
+      /**
+   * gradient color
+   */
+
+      --gradient: linear-gradient(-90deg,
+          hsl(151, 58%, 46%) 0%,
+          hsl(170, 75%, 41%) 100%);
+
+      /**
+   * typography
+   */
+
+      --ff-league_spartan: "League Spartan", sans-serif;
+      --ff-poppins: "Poppins", sans-serif;
+
+      --fs-1: 4.2rem;
+      --fs-2: 3.2rem;
+      --fs-3: 2.3rem;
+      --fs-4: 1.8rem;
+      --fs-5: 1.5rem;
+      --fs-6: 1.4rem;
+      --fs-7: 1.3rem;
+
+      --fw-500: 500;
+      --fw-600: 600;
+
+      /**
+   * spacing
+   */
+
+      --section-padding: 55px;
+
+      /**
+   * shadow
+   */
+
+      --shadow-1: 0 6px 15px 0 hsla(0, 0%, 0%, 0.05);
+      --shadow-2: 0 10px 30px hsla(0, 0%, 0%, 0.06);
+      --shadow-3: 0 10px 50px 0 hsla(220, 53%, 22%, 0.1);
+
+      /**
+   * radius
+   */
+
+      --radius-pill: 500px;
+      --radius-circle: 50%;
+      --radius-3: 3px;
+      --radius-5: 5px;
+      --radius-10: 10px;
+
+      /**
+   * transition
+   */
+
+      --transition-1: 0.25s ease;
+      --transition-2: 0.5s ease;
+      --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+      --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+    }
+
+    /*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a,
+    img,
+    span,
+    data,
+    input,
+    button,
+    ion-icon {
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      height: auto;
+    }
+
+    input,
+    button {
+      background: none;
+      border: none;
+      font: inherit;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    ion-icon {
+      pointer-events: none;
+    }
+
+    address {
+      font-style: normal;
+    }
+
+    html {
+      font-family: var(--ff-poppins);
+      font-size: 10px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--gray-web);
+      font-size: 1.6rem;
+      line-height: 1.75;
+    }
+
+    :focus-visible {
+      outline-offset: 4px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: hsl(0, 0%, 98%);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: hsl(0, 0%, 80%);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: hsl(0, 0%, 70%);
+    }
+
+    /*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+    .container {
+      padding-inline: 15px;
+    }
+
+    /* Set the padding on both sides in the inline direction: (left to right)*/
+    .section {
+      padding-block: var(--section-padding);
+      
+    }
+
+    /* Set the padding on both sides in the block direction: (up to down)*/
+
+    .shape {
+      position: absolute;
+      display: none;
+    }
+
+    .has-bg-image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .h1,
+    .h2,
+    .h3 {
+      color: var(--eerie-black-1);
+      font-family: var(--ff-league_spartan);
+      line-height: 1;
+    }
+
+    .h1,
+    .h2 {
+      font-weight: var(--fw-600);
+    }
+
+    .h1 {
+      font-size: var(--fs-1);
+    }
+
+    .h2 {
+      font-size: var(--fs-2);
+    }
+
+    .h3 {
+      font-size: var(--fs-3);
+      font-weight: var(--fw-500);
+    }
+
+    .section-title {
+      --color: var(--radical-red);
+      text-align: center;
+    }
+
+    .section-title .span {
+      display: inline-block;
+      color: var(--color);
+    }
+
+    .btn {
+      background-color: var(--blood-pink);
+      color: white;
+      font-family: var(--ff-league_spartan);
+      font-size: var(--fs-4);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      max-width: max-content;
+      padding: 10px 20px;
+      border-radius: var(--radius-5);
+      overflow: hidden;
+    }
+
+    .btn:hover {
+      color: black;
+    }
+
+    .has-before,
+    .has-after {
+      position: relative;
+      z-index: 1;
+    }
+
+    .has-before::before,
+    .has-after::after {
+      position: absolute;
+      content: "";
+
+    }
+
+    .btn::before {
+      inset: 0;
+      /* background-image: var(--gradient); */
+      background-color: var(--platinum);
+      z-index: -1;
+      border-radius: inherit;
+      transform: translateX(-100%);
+      transition: var(--transition-2);
+
+    }
+
+    /* effect comes from -100 to 0 looks like water fills from left to right */
+
+
+    .btn:is(:hover, :focus)::before {
+      transform: translateX(0);
+
+    }
+
+    .img-holder {
+      aspect-ratio: var(--width) / var(--height);
+      /* background-color: var(--light-gray); */
+      overflow: hidden;
+    }
+
+    .img-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .section-subtitle {
+      font-size: var(--fs-5);
+      text-transform: uppercase;
+      font-weight: var(--fw-500);
+      letter-spacing: 1px;
+      text-align: center;
+      margin-block-end: 15px;
+    }
+
+    .section-text {
+      font-size: var(--fs-5);
+      text-align: center;
+      margin-block: 15px 25px;
+    }
+
+    .grid-list {
+      display: grid;
+      gap: 30px;
+    }
+
+    .category-card,
+    .stats-card {
+      background-color: hsla(var(--color), 0.1);
+    }
+
+    :is(.course, .blog) .section-title {
+      margin-block-end: 40px;
+    }
+
+    /*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+    .header .btn {
+      display: block;
+
+    }
+
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--white);
+      /* background-color: red; */
+      padding-block: 10px;
+      box-shadow: var(--shadow-1);
+      z-index: 4;
+    }
+
+    /* .header.active {
+  position: fixed;
+} */
+
+    .header .container,
+    .header-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+    .header .btn {
+        display: flex;
+        padding: 10px 15px;
+        margin-inline: 5px;
+      }
+
+    /* .header-action-btn,
+.nav-close-btn {
+  position: relative;
+  color: var(--eerie-black-1);
+  font-size: 24px;
+  transition: var(--transition-1);
+} */
+    /* .card-title {
+  width: auto;
+}
+
+.header-action-btn:is(:hover, :focus) {
+  color: var(--kappel);
+} */
+
+    /* .header-action-btn .btn-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--kappel);
+  color: var(--white);
+  font-family: var(--ff-league_spartan);
+  font-size: var(--fs-6);
+  min-width: 20px;
+  height: 20px;
+  border-radius: var(--radius-circle);
+} */
+
+    .navbar {
+      display: none;
+      position: fixed;
+      top: 0;
+      /* left: -320px; */
+      background-color: var(--white);
+      /* background-color: darkorange; */
+      width: 100%;
+      max-width: 320px;
+      height: 100%;
+      z-index: 2;
+      transition: 0.25s var(--cubic-in);
+    }
+
+    .navbar.active {
+      transform: translateX(320px);
+      transition: 0.5s var(--cubic-out);
+    }
+
+    /* .navbar .wrapper {
+  background-color: blue;
+  padding: 15px 20px;
+  border-block-end: 1px solid var(--platinum);
+} */
+
+    .nav-close-btn {
+      background-color: var(--white);
+      box-shadow: var(--shadow-2);
+      padding: 8px;
+      border-radius: var(--radius-circle);
+    }
+
+
+    .nav-close-btn:is(:hover, :focus) {
+      background-color: var(--kappel);
+      color: var(--white);
+    }
+
+    .navbar-list {
+      padding: 15px 20px;
+    }
+
+    .navbar-item:not(:last-child) {
+      border-block-end: 1px solid var(--platinum);
+    }
+
+    .navbar-link {
+      padding-block: 8px;
+      font-weight: var(--fw-500);
+      transition: var(--transition-1);
+    }
+
+    .navbar-link:is(:hover, :focus) {
+      color: var(--blood-pink);
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background-color: var(--black_80);
+      pointer-events: none;
+      opacity: 0;
+      z-index: 1;
+      transition: var(--transition-1);
+    }
+
+    .overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /*-----------------------------------*\
+  #HERO
+\*-----------------------------------*/
+
+    .hero {
+      padding-block-start: calc(var(--section-padding) + 80px);
+    }
+
+    .hero .container {
+      display: grid;
+      gap: 40px;
+      /* background-color: blue; */
+    }
+
+    .hero-text {
+      color: var(--eerie-black-1);
+      font-size: var(--fs-4);
+      text-align: center;
+      margin-block: 18px 20px;
+    }
+
+    .hero .btn {
+      padding: 10px 15px;
+      margin-inline: auto;
+      border-radius: 80px;
+    }
+    
+
+
+    /*-----------------------------------*\
+  #CATEGORY
+\*-----------------------------------*/
+
+    .category .section-subtitle {
+      color: var(--radical-red);
+    }
+
+    .category .section-title {
+      --color: var(--blood-pink);
+    }
+
+    .category .section-text {
+      margin-block-end: 40px;
+    }
+
+    .category-card {
+      padding: 50px 30px;
+      text-align: center;
+      border-radius: var(--radius-5);
+      /* background-color: blue; */
+      background-image: url("https://i.pinimg.com/474x/e0/42/16/e04216081c919845fae67a8bb48f8490.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .category-card .card-icon {
+      /* background-color: hsla(var(--color), 0.1); */
+      /* background-color: black; */
+      width: 200px;
+      height: 200px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius-circle);
+      margin-inline: auto;
+      margin-block-end: 30px;
+    }
+
+    .category-card .card-icon img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .category-card .card-text {
+      color: var(--eerie-black-1);
+      font-size: var(--fs-5);
+      margin-block: 15px 25px;
+      text-align: justify;
+    }
+
+    .category-card .card-badge {
+      background-color: var(--blood-pink);
+      color: white;
+      font-size: var(--fs-5);
+      font-weight: var(--fw-500);
+      padding: 2px 18px;
+      max-width: max-content;
+      margin-inline: auto;
+      border-radius: var(--radius-5);
+    }
+
+    .card-badge:hover {
+      background-color: rgb(237, 203, 225);
+      color: black;
+      font-size: 15px;
+    }
+
+    .category .btn {
+      margin-inline: auto;
+      margin-block: 20px;
+    }
+
+
+    /*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
+
+    .about {
+      padding-block-start: 0;
+      overflow: hidden;
+    }
+
+    .about .container {
+      display: grid;
+      gap: 10px;
+    }
+
+    .about-banner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-banner .img-holder {
+      border-radius: var(--radius-10);
+    }
+
+    .about-shape-2 {
+      display: block;
+      bottom: -100px;
+      left: -60px;
+      animation: bounce 2.5s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+
+      40% {
+        transform: translateY(-30px);
+      }
+
+      60% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .about :is(.section-subtitle, .section-title, .section-text) {
+      text-align: left;
+    }
+
+    .about-item {
+      margin-block: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .about-item .fa-check {
+      color: var(--selective-yellow);
+      font-size: 20px;
+      --ionicon-stroke-width: 50px;
+    }
+
+    .about-item .span {
+      color: var(--eerie-black-1);
+      font-family: var(--ff-league_spartan);
+    }
+
+
+
+
+
+    @media (min-width:575px) {
+      /**
+   * REUSED STYLE
+   */
+
+      .container {
+        /* background-color: black; */
+        max-width: 550px;
+        width: 100%;
+        margin-inline: auto;
+      }
+
+
+      :is(.course, .blog) .grid-list {
+        grid-template-columns: 1fr;
+      }
+
+      .header .container {
+        max-width: unset;
+      }
+
+      .header-actions {
+        gap: 2px;
+      }
+      .header .btn {
+        display: flex;
+        padding: 10px 15px;
+        margin-inline: 5px;
+      }
+
+      /**
+   * HERO
+   */
+
+      .hero-banner {
+        grid-template-columns: 1fr 0.9fr;
+      }
+
+
+    }
+
+    /**
+ * responsive for large than 768px screen
+ */
+
+    @media (min-width: 768px) {
+      /**
+   * CUSTOM PROPERTY
+   */
+
+      :root {
+        /**
+     * typography
+     */
+
+        --fs-1: 4.6rem;
+        --fs-2: 3.8rem;
+      }
+
+      /**
+   * REUSED STYLE
+   */
+
+      .container {
+        max-width: 720px;
+      }
+
+      .btn {
+        padding: 15px 30px;
+      }
+
+      /* .grid-list {
+        grid-template-columns: 1fr 1fr;
+      } */
+
+      :is(.course, .blog) .grid-list {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      /**
+   * HEADER
+   */
+
+      .header .container {
+        padding-inline: 30px;
+
+      }
+
+      .header .btn {
+        display: flex;
+        padding: 10px 30px;
+        margin-inline: 20px;
+      }
+
+      /**
+   * HERO
+   */
+
+      .hero {
+        
+        padding-block-start: calc(var(--section-padding) + 90px);
+      }
+
+      .hero .container {
+        gap: 50px;
+      }
+
+      .hero-text {
+        margin-block-end: 30px;
+      }
+
+      .hero-banner {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-banner .img-holder {
+        max-width: max-content;
+      }
+
+      .hero-banner .img-holder.one {
+        justify-self: flex-end;
+      }
+
+      /**
+   * ABOUT
+   */
+
+      .about {
+        padding-block-start: 50px;
+      }
+
+      .about-banner {
+        padding: 60px;
+        padding-inline-end: 0;
+      }
+
+      .about-banner .img-holder {
+        max-width: max-content;
+        margin-inline: auto;
+      }
+
+      .about-shape-1 {
+        display: block;
+        top: -40px;
+        right: -70px;
+      }
+    }
+
+    /**
+ * responsive for large than 992px screen
+ */
+
+    @media (min-width: 992px) {
+      /**
+   * CUSTOM PROPERTY
+   */
+
+      :root {
+        /**
+     * typography
+     */
+
+        --fs-1: 5.5rem;
+        --fs-2: 4.5rem;
+      }
+
+      /**
+   * REUSED STYLE
+   */
+
+      .container {
+        max-width: 960px;
+      }
+
+      /* .grid-list {
+        grid-template-columns: repeat(3, 1fr);
+      } */
+
+      :is(.course, .blog) .grid-list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+
+      /**
+   * HERO
+   */
+
+      .hero .container {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+
+      .hero .section-title,
+      .hero-text {
+        text-align: left;
+      }
+
+      .hero .btn {
+        margin-inline: 0;
+      }
+
+      /**
+   * ABOUT
+   */
+
+      .about .container {
+        grid-template-columns: 1fr 0.6fr;
+        align-items: center;
+        gap: 60px;
+      }
+
+    }
+
+    /* category */
+    /* .category .card-title{
+      font-size: 4rem;
+    } */
+
+    /**
+ * responsive for large than 1200px screen
+ */
+
+    @media (min-width: 1200px) {
+      /**
+   * CUSTOM PROPERTY
+   */
+
+      :root {
+        /**
+     * typography
+     */
+
+        --fs-1: 6.5rem;
+
+        /**
+     * spacing
+     */
+
+        --section-padding: 80px;
+      }
+
+      /**
+   * REUSED STYLE
+   */
+
+      .container {
+        /* border: 1px solid rebeccapurple; */
+        max-width: 1185px;
+      }
+
+      .grid-list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      */ .shape {
+        display: block;
+      }
+
+      .about-content,
+      .video-card,
+      .blog {
+        position: relative;
+      }
+
+      /**
+   * HEADER
+   */
+
+      .header-action-btn:last-child,
+      .navbar .wrapper,
+      .overlay {
+        display: none;
+      }
+
+      .header.active {
+        transform: translateY(-100%);
+        animation: slideIn 0.5s ease forwards;
+      }
+
+      @keyframes slideIn {
+        0% {
+          transform: translateY(-100%);
+        }
+
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .navbar,
+      .navbar.active {
+        all: unset;
+      }
+
+      .navbar-list {
+        display: flex;
+        gap: 50px;
+        padding: 0;
+      }
+
+      .navbar-item:not(:last-child) {
+        border-block-end: none;
+      }
+
+      .navbar-link {
+        color: var(--eerie-black-1);
+        padding-block: 20px;
+      }
+
+      .header .btn {
+        margin-inline-end: 0;
+      }
+
+      /**
+   * HERO
+   */
+
+      .hero {
+        padding-block-start: calc(var(--section-padding) + 80px);
+      }
+
+      .hero .container {
+
+        gap: 80px;
+      }
+
+      .hero-shape-2 {
+        top: -80px;
+        z-index: -1;
+      }
+      
+      .category {
+        padding-block-start: calc(30px);
+      }
+
+      /**
+   * ABOUT
+   */
+
+      .about .container {
+        gap: 20px;
+      }
+
+      .about-banner .img-holder {
+        margin-inline: 0;
+      }
+
+      .about-shape-3 {
+        display: block;
+        top: -20px;
+        left: -100px;
+        z-index: -1;
+      }
+
+      .about-content {
+        
+        z-index: 1;
+      }
+
+      .about-shape-4 {
+        top: 30px;
+        right: -60px;
+        z-index: -1;
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header" data-header>
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="https://sakshamdigitaltechnology.com/sdt/images/logo.png" width="162" height="50" alt="company logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="" class="navbar-link">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="" class="navbar-link">About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="" class="navbar-link">E-learn</a>
+          </li>
+          <li class="navbar-item">
+            <a href="" class="navbar-link">Training</a>
+          </li>
+          <li class="navbar-item">
+            <a href="" class="navbar-link">Services</a>
+          </li>
+          <li class="navbar-item">
+            <a href="" class="navbar-link">Certificate</a>
+          </li>
+        </ul>
+
+      </nav>
+      <div class="header-actions">
+        <a href="" class="btn has-before">
+          <i class="fa-solid fa-user"></i><span class="span">Login</span></a>
+        <a href="" class="btn has-before">
+          <i class="fa-solid fa-right-to-bracket"></i><span class="span">Register</span></a>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <article>
+      <!-- hero -->
+      <section class="section hero has-bg-image" id="home" aria-label="home">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="h1 section-title">Upgrade your coding skills with <span class="span">Saksham</span> Digital
+              Technology</h1>
+            <p class="hero-text">Discover lectures , Tutorials & Test your skills.</p>
+            <a href="" class="btn has-before">
+              <span class="span">Register now ! <i class="fa-solid fa-arrow-right" style="background-color: white; padding: 10px;color: black; border-radius: 50%;"></i></span>
+            </a>
+          </div>
+
+
+
+          <figure class="hero-banner">
+            <div class="img-holder" style="--width: 270; --height: 300;">
+              <img
+                src="./img/png-transparent-web-design-user-experience-web-development-search-engine-optimization-usability-web-developer-technology-line-removebg.png"
+                width="270" height="300" alt="hero banner" class="img-cover">
+            </div>
+          </figure>
+        </div>
+
+      </section>
+
+
+
+      <!-- category -->
+      <section class="section category" aria-label="category"  >
+        <div class="container">
+
+          <p class="section-subtitle">Services</p>
+
+          <h2 class="h2 section-title">
+            Unlock Boundless <span class="span">Opportunities</span> with Our Innovative Educational Programs!
+          </h2>
+
+          <p class="section-text">
+            Simplifying complexity, delivering success.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="category-card .has-bg-image">
+
+                <div class="card-icon">
+                  <img src="./img/Web_Dev.png" loading="lazy" alt="Online Degree Programs" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Website Development</a>
+                </h3>
+
+                <p class="card-text">
+                  Our website development service starts with a consultation to understand your business goals, target
+                  audience, and requirements. We take the time to understand your business and its unique needs, so that
+                  we can create a website that reflects your brand and helps you achieve your business objectives.
+                </p>
+
+                <span class="card-badge btn has-before">Explore</span>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 351, 83%, 61%">
+
+                <div class="card-icon">
+                  <img src="./img/App_dev.png" loading="lazy" alt="Non-Degree Programs" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Application Development</a>
+                </h3>
+
+                <p class="card-text">
+                  Our main motive is to provide quality education to our trainees to make the future bright for them.
+                  We provide job training for all types of Internet Marketing and Software Courses used in the real
+                  world job environment.
+                  We cater to all the individuals ranging from beginner level computer user to the IT professionals.
+                </p>
+
+                <span class="card-badge btn has-before">Explore</span>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 229, 75%, 58%">
+
+                <div class="card-icon">
+                  <img src="./img/4012b2bd068310d80ece789b6d1ab756.png" width="40" height="40" loading="lazy"
+                    alt="Off-Campus Programs" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Artificial Intelligence</a>
+                </h3>
+
+                <p class="card-text">
+                  Saksham Digital Technology is a leading training Institute in Bhopal with more than 5 years of
+                  experience in this field. We are most popular for our training approach and strategies. These enable
+                  students to gain real-time exposure on cutting-edge technologies.We are specialized in providing
+                  excellent and cost-effective training courses.
+
+                </p>
+
+                <span class="card-badge btn has-before">Explore</span>
+
+              </div>
+            </li>
+
+
+
+          </ul>
+          <a href="#" class="btn has-before">
+            <span class="span">Browse more courses</span>
+          </a>
+        </div>
+
+      </section>
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <figure class="about-banner">
+
+            <!-- /main girl in about section -->
+            <div class="img-holder" style="--width: 520; --height: 370;">
+              <img src="./img/about-banner.jpg" width="520" height="370" loading="lazy" alt="about banner"
+                class="img-cover">
+            </div>
+
+            <!-- side ray image -->
+            <img src="./img/about-shape-1.svg" width="360" height="420" loading="lazy" alt=""
+              class="shape about-shape-1">
+
+            <!-- /bouce animataion image -->
+            <img src="./img/about-shape-2.svg" width="371" height="220" loading="lazy" alt=""
+              class="shape about-shape-2">
+
+            <img src="./img/about-shape-3.png" width="722" height="528" loading="lazy" alt=""
+              class="shape about-shape-3">
+
+          </figure>
+
+          <div class="about-content" >
+
+            <p class="section-subtitle">About Us</p>
+
+            <h2 class="h2 section-title">
+              Over 5 Years in leading <span class="span">Training Institute</span> for Skill Development
+            </h2>
+
+            <p class="section-text">
+              Saksham Digital Technology is a leading training Institute in Bhopal with more than 5 years of experience
+              in this field. We are most popular for our training approach and strategies. These enable students to gain
+              real-time exposure on cutting-edge technologies.We are specialized in providing excellent and
+              cost-effective training courses.
+            </p>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+                <i class="fa-solid fa-check"></i>
+
+                <span class="span">Expert Trainers</span>
+              </li>
+
+              <li class="about-item">
+                <i class="fa-solid fa-check"></i>
+
+                <span class="span">Real-time live project based training</span>
+              </li>
+
+              <li class="about-item">
+                <i class="fa-solid fa-check"></i>
+
+                <span class="span">Unlimited access</span>
+              </li>
+              <li class="about-item">
+                <i class="fa-solid fa-check"></i>
+
+                <span class="span">Placement oriented courses</span>
+              </li>
+              <li class="about-item">
+                <i class="fa-solid fa-check"></i>
+
+                <span class="span">Affordable fees</span>
+              </li>
+            </ul>
+
+            <img src="./img/about-shape-4.svg" width="100" height="100" loading="lazy" alt=""
+              class="shape about-shape-4">
+
+          </div>
+
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
+
+</html>
